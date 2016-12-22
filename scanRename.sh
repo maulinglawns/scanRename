@@ -26,7 +26,7 @@ Show this help"
 
 # Our regex patterns:
 fileName="([0-9A-Öa-ö ].*)"
-extensions="(\.tiff|\.jpg|\.png)"
+extensions="(\.tif|\.tiff|\.jpg|\.png)"
 # Complete regex:
 regex="$fileName[0-9]{3}$extensions"
 
