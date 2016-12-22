@@ -39,6 +39,9 @@ if [[ $# > 1 ]]; then
 elif [[ $# == 1 && $1 == "-h" ]]; then
     echo "$helpText"
     exit 0
+elif [[ $# == 1 && $1 =~ ^- && $1 != "-h" ]]; then
+    echo "Unknown option $1. See $0 -h for usage."
+    exit 2
 elif [[ $# == 1 && ! -r $1 ]]; then
     echo "The directory $1 does not exist or is not readable."
     exit 2 
