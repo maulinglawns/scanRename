@@ -44,7 +44,7 @@ elif [[ $# == 1 && $1 =~ ^- && $1 != "-h" ]]; then
     exit 2
 elif [[ $# == 1 && ! -r $1 ]]; then
     echo "The directory $1 does not exist or is not readable."
-    exit 2 
+    exit 3
 fi
 
 
@@ -57,7 +57,12 @@ elif [[ $# == 1 && -r $1 ]]; then
 fi
 
 # Change into directory specified above
-cd $scanDir
+if [[ -r $scanDir ]]; then
+    cd $scanDir
+else
+    echo "The directory $scanDir does not exist or is not readable!"
+    exit 4
+fi
 
 # Loop directory for images
 for img in *; do
