@@ -27,12 +27,12 @@ Too many arguments. See ./scanRename.sh -h for usage
 ./scanRename.sh -i
 Unknown option -i. See ./scanRename.sh -h for usage.</pre>
 
+---
+
 Now some examples of correct usage:
 <pre>./scanRename.sh $HOME/Desktop/myImages
 self portrait471.jpg -> self portrait.jpg
 1 image(s) processed.</pre>
-
----
 
 **Before and after...**<br>
 Before:
